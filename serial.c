@@ -58,7 +58,7 @@ int main()
 			
 	struct timeval now;
 	gettimeofday(&now,NULL);
-	printf("Computation finished in %lf seconds.\n",now.tv_sec-begin.tv_sec + (now.tv_usec-begin.tv_usec)/1000000.0);
+	printf("Computation finished in %lf ms.\n",(now.tv_sec-begin.tv_sec)*1000 + (now.tv_usec-begin.tv_usec)/1000.0);
 
 	for (int i=n-1; i>=0; i--) fprintf(fout,"%d ",perm[i]);	
 }
